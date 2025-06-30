@@ -6,23 +6,39 @@ class pet:
         self.adopted=False
     
     def display_info(self):
-        if self.adopted==True:
-            adoption_status="is adopted"
+        if self.adopted==False:
+            adoption_status="is not adopted"
         else:
-            adoption_status="Not adopted"
-        print(f"Pet's name is : {self.name}", 
-              f"Pet's age is : {self.age}" ,
-              f"Pet's specie is: {self.species}",
-              f"Pet's adoption status is :{adoption_status}"
+            adoption_status="is adopted"
+        print(f"Pet's name is : {self.name} \n", 
+              f"Pet's age is : {self.age} \n" ,
+              f"Pet's specie is: {self.species} \n",
+              f"Pet's adoption status is : {adoption_status}"
         )
 
     def mark_adopted(self):
-        self.adopted==True
-        print(f"{self.adopted} is now adopted")    
+        self.adopted=True
+        print(f"{self.name} is now adopted")    
 
     def birthday(self):
         self.age+=1
-        print(f"Happy birthday{self.name}, your age is: {self.age}")
+        print(f"Happy birthday {self.name}, your age is: {self.age}")
+
+pet1=pet("Max", "Dog", 1)
+pet2=pet("Molly","Cat", 2)
+pet3=pet("Flufy","Cat", 3)
+pet4=pet("Barney","Dog", 2)
+
+
+pet1.display_info()
+#pet2.display_info()
+#pet3.display_info()
+#pet4.display_info()
+
+
+pet1.birthday()
+pet1.mark_adopted()
+pet1.display_info()
 
 
     
