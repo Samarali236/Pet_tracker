@@ -20,6 +20,11 @@ class pet:
     def birthday(self):
         self.age+=1
         return f" Happy birthday {self.name}! \n your age now is : {self.age}"
+    
+    def rename(self,new_name):
+        old_name= self.name
+        self.name=new_name
+        return f"The old name was: {old_name} The new name is: {new_name}"
 
 
 pet1=pet("Max", "Dog", 1)
@@ -43,6 +48,7 @@ def find_non_adopted(list):
     return f"The List of non adopted pets is {non_adopted_list}"
 
 print(find_non_adopted(pets_list))
+print(pet1.rename("Boby"))
 
 
 
